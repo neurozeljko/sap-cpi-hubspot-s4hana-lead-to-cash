@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HubSpotContractWebhookSchema",
+  "type": "object",
+  "properties": {
+    "dealId": { "type": "string" },
+    "dealName": { "type": "string" },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "customerAccountNumber": { "type": "string" },
+    "isSimulatedDuplicate": { "type": "boolean" },
+    "lineItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemPosition": { "type": "string" },
+          "productSku": { "type": "string" },
+          "quantity": { "type": "number" },
+          "unitOfMeasure": { "type": "string" },
+          "unitPrice": { "type": "number" }
+        },
+        "required": ["productSku", "quantity", "unitPrice"]
+      }
+    }
+  },
+  "required": ["dealId", "amount", "customerAccountNumber", "lineItems"]
+}

@@ -1,0 +1,24 @@
+{
+  "dealId": "DEAL-ENT-GLOBAL-50M",
+  "dealName": "Global Cloud Infrastructure Expansion 2026",
+  "amount": 50000000.00,
+  "currency": "USD",
+  "customerAccountNumber": "CUST-US-99410",
+  "isSimulatedDuplicate": false,
+  "lineItems": [
+    {
+      "itemPosition": "10",
+      "productSku": "INFRA-HYBRID-CORE-G3",
+      "quantity": 1000.0,
+      "unitOfMeasure": "EA",
+      "unitPrice": 45000.00
+    },
+    {
+      "itemPosition": "20",
+      "productSku": "INFRA-MANAGED-SUPPORT-247",
+      "quantity": 1.0,
+      "unitOfMeasure": "EA",
+      "unitPrice": 5000000.00
+    }
+  ]
+}

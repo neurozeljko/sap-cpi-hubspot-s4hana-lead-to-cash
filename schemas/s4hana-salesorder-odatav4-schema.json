@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "S4HANASalesOrderODataV4Schema",
+  "type": "object",
+  "properties": {
+    "SalesOrderType": { "type": "string" },
+    "SoldToParty": { "type": "string" },
+    "PurchaseOrderByCustomer": { "type": "string" },
+    "TransactionCurrency": { "type": "string" },
+    "TotalNetAmount": { "type": "number" },
+    "to_Item": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Material": { "type": "string" },
+          "RequestedQuantity": { "type": "string" },
+          "NetPriceAmount": { "type": "number" }
+        },
+        "required": ["Material", "RequestedQuantity"]
+      }
+    }
+  },
+  "required": ["SalesOrderType", "SoldToParty", "to_Item"]
+}
